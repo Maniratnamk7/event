@@ -1,0 +1,18 @@
+<table align="center" border="2">
+    <tr><th>Event Id</th><th>UserName</th><th>Event Name</th><th>Date</th><th>Time</th><th>Location</th><th>Guests</th><th colspan="2">Actions</th></tr>
+    <tr *ngFor="let event of events">
+        <td>{{event.eventId}}</td>
+        <td>{{event.name }}</td>
+        <td>{{event.eventType }}</td>
+        <td>{{event.date }}</td>
+        <td>{{event.time }}</td>
+        <td>{{event.location}}</td>
+        <td>{{event.guests}}</td>
+        <td><button (click)="cancelEvent(event.eventId)"><div class="glyphicon glyphicon-trash"></div></button></td>
+        <!-- <td>{{employee.doj | exp}}</td> -->
+        <!-- <td><button (click)="deleteEmployee(employee.empId)"><span class="material-icons">Delete</span></button></td>
+        <td><button (click)="updateEmployee(employee.empId)">Edit</button></td> -->
+    </tr>
+    <!-- <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button> -->
+    </table>
